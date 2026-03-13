@@ -34,7 +34,7 @@ while guesses > 0 and cont:
 
     letter = input("Enter your guess: ")
     while letter in let_guesses:
-        print("You already picked", letter, ". Please pick another letter.")
+        print("You have already picked", letter, ". Please pick another letter.")
         letter = input("Enter your guess: ")
     let_guesses.append(letter)
 
