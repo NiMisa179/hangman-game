@@ -1,8 +1,9 @@
 import requests
 
-url = "https://random-word-api.herokuapp.com/word"
+symbol = 'AAPL'
+url = "https://api.api-ninjas.com/v2/randomword?ticker={}".format(symbol)
 
-response = requests.get(url)
+response = requests.get(url, headers={'X-Api-Key':'YOUR-API-KEY'})
 if response.status_code == 200:
     data = response.json()
     # print(data[0])
