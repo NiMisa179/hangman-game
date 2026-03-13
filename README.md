@@ -22,9 +22,9 @@ The well-known Hangman Game is implemented by this project. The dictionary of th
 
 # 5. Structure
 ``` text
-hangman-game/    
+hangman_progect/    
 
-├── hangmanGame.py         # Main program
+├── hangman.py         # Main program
 └── README.md           # Project Documentation
 ``` 
 
@@ -32,77 +32,116 @@ hangman-game/
 
 ``` plaintext
 
-* * * * * * Menu * * * * * *
-----------------------------
-1  Margherita          6.5       
-2  Farm House          6         
-3  Peppy Paneer        7.5       
-4  Mexican Green Wave  7         
-5  Deluxe Veggie       8         
-6  Veg Extravaganza    8.5       
-7  Cheese n Corn       5         
-8  Fresh Veggie        5.5       
-9  Veggie Paradise     6.5       
-10 Special             9         
-----------------------------
-Would you like to place an order? yes/no: yes
-Place your order, Pick a number to choose a pizza and after that type the quantity of that product.
-If you like to stop, type -1
-Press 0 to modify your order
-Choose a number between 1 and 10: 1
-Type the quantity of that product: 2
-2  Margherita          13.0      
-----------------------------
-13.0
-Choose a number between 1 and 10: 7
-Type the quantity of that product: 1
-2  Margherita          13.0      
-1  Cheese n Corn       5         
-----------------------------
-18.0
-Choose a number between 1 and 10: 0
-2  Margherita          13.0      
-1  Cheese n Corn       5         
-----------------------------
-18.0
-Which row would you like to modify? 1
-Type the new quantity: 1
-1  Margherita          6.5       
-1  Cheese n Corn       5         
-----------------------------
-11.5
-Choose a number between 1 and 10: 0
-1  Margherita          6.5       
-1  Cheese n Corn       5         
-----------------------------
-11.5
-Which row would you like to modify? 2
-Type the new quantity: 0
-1  Margherita          6.5       
-----------------------------
-6.5
-Choose a number between 1 and 10: 10
-Type the quantity of that product: 2
-1  Margherita          6.5       
-2  Special             18        
-----------------------------
-24.5
-Choose a number between 1 and 10: -1
-1  Margherita          6.5       
-2  Special             18        
-----------------------------
-24.5
-1  Margherita          6.5       
-2  Special             18        
-----------------------------
-Checkout:              24.5
+Welcome to Hangman game!
+A random word has picked
+You guess the word, you WIN!!
+You have 8 guesses. For each wrong guess a body part will be drawn
+When the little person appears it means you have lost the game
+- - - - - 
+Enter your guess: f
+- - - - f 
+Enter your guess: a
+Wrong guess. The chosen word has not any a
+  O 
+- - - - f 
+Enter your guess: e
+Wrong guess. The chosen word has not any e
+  O 
+-
+- - - - f 
+Enter your guess: r
+- r - - f 
+Enter your guess: f
+You have already picked f . Please pick another letter.
+Enter your guess: p
+p r - - f 
+Enter your guess: e
+You have already picked e . Please pick another letter.
+Enter your guess: d
+Wrong guess. The chosen word has not any d
+  O 
+--
+p r - - f 
+Enter your guess: o
+p r o o f 
+You won! You guessed the word proof
+
+Process finished with exit code 0
+
+```
+Failure
+``` plaintext
+Welcome to Hangman game!
+A random word has picked
+You guess the word, you WIN!!
+You have 8 guesses. For each wrong guess a body part will be drawn
+When the little person appears it means you have lost the game
+- - - - - - - - - - - - 
+Enter your guess: g
+Wrong guess. The chosen word has not any g
+  O 
+- - - - - - - - - - - - 
+Enter your guess: h
+Wrong guess. The chosen word has not any h
+  O 
+-
+- - - - - - - - - - - - 
+Enter your guess: f
+Wrong guess. The chosen word has not any f
+  O 
+--
+- - - - - - - - - - - - 
+Enter your guess: d
+Wrong guess. The chosen word has not any d
+  O 
+--|
+- - - - - - - - - - - - 
+Enter your guess: b
+Wrong guess. The chosen word has not any b
+  O 
+--|-
+- - - - - - - - - - - - 
+Enter your guess: g
+You have already picked g . Please pick another letter.
+Enter your guess: o
+- - - o - - - - - - - - 
+Enter your guess: e
+e - - o - - - - - - - e 
+Enter your guess: i
+e - - o - - - - - i - e 
+Enter your guess: n
+Wrong guess. The chosen word has not any n
+  O 
+--|--
+e - - o - - - - - i - e 
+Enter your guess: b
+You have already picked b . Please pick another letter.
+Enter your guess: u
+Wrong guess. The chosen word has not any u
+  O 
+--|--
+ /
+e - - o - - - - - i - e 
+Enter your guess: p
+e - - o p - - - - i - e 
+Enter your guess: f
+You have already picked f . Please pick another letter.
+Enter your guess: t
+e - t o p - - - - i t e 
+Enter your guess: m
+Wrong guess. The chosen word has not any m
+  O 
+--|--
+ / \
+You lost :(. The word was ectoparasite
 
 Process finished with exit code 0
 
 ```
 
 # 7. Future Improvements
-Some future improvements I keep in mind are:
-* Keep track of orders using a database
-* Make the program flexible by creating a non-stable menu
-* Re-write the program using object-oriented programming
+* GUI
+
+# 8. Author
+Nikos Misailidis
+Github: https://github.com/NiMisa179
